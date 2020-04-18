@@ -20,7 +20,7 @@ class Anagram
     def match(words)
       anagrams = []
       orig_word = @word.split("")
-      words.collect {|elem| elem.split("").sort  == orig_word.sort}
+      words.select {|elem| elem.split("").sort == orig_word.sort}
 
     end
 
