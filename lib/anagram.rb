@@ -6,23 +6,10 @@ class Anagram
     @word = word
   end
 
-  # def match(words)
-  #   anagrams = []
-  #   orig_word = @word.split("")
-  #   words.each do |elem|
-  #     letters = elem.split("")
-  #     if letters.sort == orig_word.sort
-  #       anagrams << elem
-  #     end
-  #   end
-  #   anagrams
+  def match(words)
+    anagrams = []
+    orig_word = @word.split("")
+    words.select {|elem| elem.split("").sort == orig_word.sort} #output is an array
 
-    def match(words)
-      anagrams = []
-      orig_word = @word.split("")
-      words.select {|elem| elem.split("").sort == orig_word.sort}
-
-    end
-
-
+  end
 end
