@@ -8,9 +8,8 @@ class Anagram
 
   def match(words)
     anagrams = []
-    orig_word = @word.split("") #original word split into letters, an array
-    #array = words.split(" ") #array of words
-    words.each do |elem| #elem is word in array
+    orig_word = @word.split("")
+    words.each do |elem|
       letters = elem.split("") #array of letters
       if letters.sort == orig_word.sort #if true
         anagrams << elem #add that word to the new array
