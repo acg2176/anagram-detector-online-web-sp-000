@@ -10,6 +10,5 @@ class Anagram
     anagrams = []
     orig_word = @word.split("")
     words.select {|elem| elem.split("").sort == orig_word.sort} #output is an array
-
   end
 end
