@@ -10,9 +10,9 @@ class Anagram
     anagrams = []
     orig_word = @word.split("")
     words.each do |elem|
-      letters = elem.split("") #array of letters
-      if letters.sort == orig_word.sort #if true
-        anagrams << elem #add that word to the new array
+      letters = elem.split("") 
+      if letters.sort == orig_word.sort
+        anagrams << elem
       end
     end
     anagrams
